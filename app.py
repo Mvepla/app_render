@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template, jsonify
 import cohere
+import os
 
 app = Flask(__name__)
 
+API_KEY = os.environ["API_KEY"]
 
 co = cohere.Client(API_KEY)
 
