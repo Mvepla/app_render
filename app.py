@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-#API_KEY = os.environ["API_KEY"]
+API_KEY = os.environ.get["API_KEY"]
 
 co = cohere.Client(API_KEY)
 
