@@ -3,7 +3,7 @@ import cohere
 
 app = Flask(__name__)
 
-API_KEY = 'Qf7htw9Uml4M1PGFmAfRrGyB5XFK4QiUmrSFuUhf'
+
 co = cohere.Client(API_KEY)
 
 def generate_catholic_priest_response(user_prompt):
