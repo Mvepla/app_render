@@ -21,7 +21,6 @@ Asegúrate de que las respuestas sean directas, con ejemplos y analogías cuando
     response = co.chat(
         model='command-r-plus',
         message=prompt_completo,
-        max_tokens=150,
         prompt_truncation="auto",
         connectors=[{"id": "web-search"}],
     )
