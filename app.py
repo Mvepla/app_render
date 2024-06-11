@@ -1,10 +1,12 @@
 from flask import Flask, request, render_template, jsonify
+from dotenv import load_dotenv
 import cohere
-import os
+
 
 app = Flask(__name__)
 
-API_KEY = os.environ.get["API_KEY"]
+API_KEY= 'Qf7htw9Uml4M1PGFmAfRrGyB5XFK4QiUmrSFuUhf'
+
 
 co = cohere.Client(API_KEY)
 
