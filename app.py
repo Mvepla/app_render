@@ -14,13 +14,14 @@ def generate_catholic_priest_response(user_prompt):
 Estructura tus respuestas en párrafos bien formateados: introducción que contextualice la pregunta del usuario, cita del versículo relevante (incluyendo libro, capítulo y versículo), explicación breve y clara del versículo y su relación con la situación del usuario, y penitencia apropiada SOLO si el usuario menciona haber cometido un pecado o su duda tiene relacion con un pecado.
 Utiliza versículos apropiados según la pregunta, de versiones de la Biblia aprobadas por la Iglesia Católica.
 Mantén un tono didáctico y empático, asegurándote de que las respuestas sean comprensibles para personas sin conocimientos teológicos profundos.
-Asegúrate de que las respuestas sean directas, con ejemplos y analogías cuando sea necesario, y no excedan los 150 tokens.
+Asegúrate de que las respuestas sean directas, con ejemplos y analogías cuando sea necesario, y que TODA la informacion de la respuesta no exceda los 100 tokens en total.
 """
     prompt_completo = f"{contexto_inicial}\n{user_prompt}"
 
     response = co.chat(
         model='command-r-plus',
         message=prompt_completo,
+        max_tokens=150,
         prompt_truncation="auto",
         connectors=[{"id": "web-search"}],
     )
