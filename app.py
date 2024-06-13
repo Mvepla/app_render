@@ -4,7 +4,7 @@ import cohere
 
 app = Flask(__name__)
 
-API_KEY= 'Qf7htw9Uml4M1PGFmAfRrGyB5XFK4QiUmrSFuUhf'
+API_KEY= '******'
 
 
 co = cohere.Client(API_KEY)
